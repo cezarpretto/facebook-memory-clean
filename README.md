@@ -11,4 +11,4 @@ It can delete posts stored in cache of facebook, avoiding lag and overload in fa
 
 # I Don't use Google Chrome
 
-You can open the script json and paste the code in developer console when you open your facebook.
+You can open the script js and paste the code in developer console when you open your facebook.
