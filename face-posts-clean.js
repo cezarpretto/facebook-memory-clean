@@ -1,29 +1,14 @@
 //Author Paulo Henrique
 //Clean Memory Facebook
-console.log("Facebook Memory Clean Started!");
+console.log("Facebook Memory Clean Started!")
 
-CleanMemory = () =>
-{
-  var Pointer = 0;
-  var PostToDelete = [];
-  var Posts = document.getElementsByTagName('div');
-
-  for(var i=0;i<Posts.length;i++){
-    if(Posts[i].getAttribute('class') == "_4ikz" ){
-      PostToDelete.push(Posts[i]);
-    }
-  }
-
-  for(var x=0;x<PostToDelete.length;x++)
-  {
-    if(Pointer <= 10){
-      PostToDelete[x].remove();
-      PostToDelete.splice(x, 1);
-      Pointer = Pointer +1;
-      console.log("POST Deleted.");
-    }
-  }
-  setTimeout(CleanMemory,60000);
+const clearMemory = () => {
+  setTimeout(() => {
+    Array.from(document.querySelectorAll('div'))
+    .filter(x => x.getAttribute('class') === '_4ikz')
+    .filter((x, idx) => idx <= 10)
+    .forEach(x => x.remove())
+    clearMemory()
+  }, 60000)
 }
-
-setTimeout(CleanMemory,60000);
+clearMemory()
