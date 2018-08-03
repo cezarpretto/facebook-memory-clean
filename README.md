@@ -1,2 +1,6 @@
 # facebook-memory-clean
 Clean Memory Facebook after 1min
+
+# How Install ?
+
+Download all files and extract in a folder, open google chrome / extensions enable extensions by developer and load extension without compact select folder and ok.
