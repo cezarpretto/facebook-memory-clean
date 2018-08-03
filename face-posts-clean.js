@@ -1,5 +1,6 @@
 //Author Paulo Henrique
 //Clean Memory Facebook
+console.log("Facebook Memory Clean Started!");
 
 CleanMemory = () =>
 {
